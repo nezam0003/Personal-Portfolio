@@ -79,6 +79,11 @@ img {
     cursor: pointer;
 }
 
+.links-container {
+    height: 0;
+    overflow: hidden;
+}
+
 .menu {
     display: flex;
     justify-content: space-between;
