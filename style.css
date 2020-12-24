@@ -1,0 +1,85 @@
+/* google fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+/* 
+font-family: 'Poppins', sans-serif;
+font-family: 'Ubuntu', sans-serif;
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+/* variables */
+
+:root {
+    --light-color: #fff;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: #333;
+}
+
+h1,
+h2 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+img {
+    width: 100%;
+}
+
+
+/* navBar styling */
+
+.navbar {
+    background: crimson;
+    position: fixed;
+    width: 100%;
+    min-height: 8vh;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.navbar nav {
+    min-width: 55%;
+}
+
+.navbar .logo a {
+    font-size: 35px;
+    color: var(--light-color);
+    font-weight: 600;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar ul li a {
+    color: var(--light-color);
+}
+
+.navbar ul li a:hover {
+    border-bottom: 2px solid var(--light-color);
+}
+
+.navbar .flex {
+    justify-content: space-between;
+}
