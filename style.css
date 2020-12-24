@@ -24,6 +24,7 @@ font-family: 'Ubuntu', sans-serif;
 body {
     color: #333;
     line-height: 1.6;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 ul {
@@ -49,11 +50,11 @@ img {
 /* navBar styling */
 
 .navbar {
-    background: crimson;
+    /* background: crimson; */
+    padding: 30px 0;
     position: fixed;
     width: 100%;
     min-height: 8vh;
-    font-family: 'Ubuntu', sans-serif;
 }
 
 .navbar nav {
@@ -66,6 +67,18 @@ img {
     font-weight: 600;
 }
 
+.navbar .logo a span {
+    color: crimson;
+}
+
+.nav-toggle {
+    background: transparent;
+    outline: none;
+    border: none;
+    color: var(--light-color);
+    cursor: pointer;
+}
+
 .menu {
     display: flex;
     justify-content: space-between;
@@ -74,12 +87,48 @@ img {
 
 .navbar ul li a {
     color: var(--light-color);
+    transition: color 0.3s ease;
 }
 
 .navbar ul li a:hover {
-    border-bottom: 2px solid var(--light-color);
+    color: crimson;
 }
 
 .navbar .flex {
     justify-content: space-between;
+}
+
+
+/* Home section styling */
+
+.home {
+    /* padding-top: 100px; */
+    display: flex;
+    background: url('images/banner.jpg') no-repeat center/ cover;
+    background-attachment: fixed;
+    height: 100vh;
+    color: var(--light-color);
+    min-height: 500px;
+}
+
+.home .container {
+    margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1 {
+    font-size: 27px;
+}
+
+.home .home-content .text-2 {
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.home .home-content .text-3 {
+    font-size: 35px;
+}
+
+.home .home-content .text-3 span {
+    color: crimson;
+    font-weight: 500;
 }
