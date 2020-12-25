@@ -181,12 +181,13 @@ header {
 
 .btn:hover {
     color: var(--clr-white);
-    background: crimson;
-    transform: scaleX(0.98);
+    background: transparent;
+    transform: scaleX(0.97);
 }
 
-.btn-white {
+.btn-crimson {
     color: var(--clr-white);
+    background: crimson;
     border-color: crimson;
     border-radius: 0;
     padding: 0.5rem 1rem;
