@@ -14,126 +14,161 @@ font-family: 'Ubuntu', sans-serif;
     text-decoration: none;
 }
 
-
-/* variables */
-
-:root {
-    --light-color: #fff;
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    color: #333;
-    line-height: 1.6;
     font-family: 'Ubuntu', sans-serif;
+    background: var(--clr-grey-10);
+    color: var(--clr-grey-1);
+    line-height: 1.5;
+    font-size: 0.875rem;
 }
 
 ul {
     list-style-type: none;
 }
 
-a {
-    color: #333;
-}
-
-h1,
-h2 {
-    font-weight: 300;
-    line-height: 1.2;
-    margin: 10px 0;
+img:not(.logo) {
+    width: 100%;
 }
 
 img {
-    width: 100%;
+    display: block;
 }
 
 
-/* navBar styling */
+/* Navbar styling */
 
-.navbar {
-    /* background: crimson; */
-    padding: 30px 0;
-    position: fixed;
-    width: 100%;
-    min-height: 8vh;
+nav {
+    background: var(--clr-white);
+    padding: 1rem 1.5rem;
 }
 
-.navbar nav {
-    min-width: 55%;
-}
-
-.navbar .logo a {
-    font-size: 35px;
-    color: var(--light-color);
-    font-weight: 600;
-}
-
-.navbar .logo a span {
-    color: crimson;
+.nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .nav-toggle {
     background: transparent;
+    border: transparent;
+    font-size: 1.5rem;
+    color: var(--clr-grey-1);
     outline: none;
-    border: none;
-    color: var(--light-color);
     cursor: pointer;
 }
 
-.links-container {
-    height: 0;
-    overflow: hidden;
+.nav-toggle:hover {
+    color: var(--clr-secondary);
 }
 
-.menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.logo a {
+    color: var(--clr-grey-1);
+    font-weight: bold;
+    font-size: 2rem;
 }
 
-.navbar ul li a {
-    color: var(--light-color);
-    transition: color 0.3s ease;
-}
-
-.navbar ul li a:hover {
+.logo a span {
     color: crimson;
 }
 
-.navbar .flex {
-    justify-content: space-between;
+.items-container {
+    height: 0;
+    transition: var(--transition);
+    overflow: hidden;
 }
 
-
-/* Home section styling */
-
-.home {
-    /* padding-top: 100px; */
-    display: flex;
-    background: url('images/banner.jpg') no-repeat center/ cover;
-    background-attachment: fixed;
-    height: 100vh;
-    color: var(--light-color);
-    min-height: 500px;
+.nav-items a {
+    display: block;
+    background: var(--clr-white);
+    color: var(--clr-grey-5);
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+    padding: 0.75rem 0;
+    transition: var(--transition);
 }
 
-.home .container {
-    margin: auto 0 auto 40px;
+.nav-items a:hover {
+    color: var(--clr-grey-1);
 }
 
-.home .home-content .text-1 {
+header {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('images/banner.jpg') center/cover no-repeat;
+}
+
+.banner {
+    width: 90%;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: grid;
+}
+
+.banner .container {
+    margin: auto 0 auto 0;
+    color: var(--clr-white);
+}
+
+.banner .container .text-1 {
     font-size: 27px;
 }
 
-.home .home-content .text-2 {
+.banner .container .text-2 {
     font-size: 50px;
     font-weight: 400;
 }
 
-.home .home-content .text-3 {
+.banner .container .text-3 {
     font-size: 35px;
 }
 
-.home .home-content .text-3 span {
+.banner .container .text-3 span {
     color: crimson;
-    font-weight: 500;
+}
+
+
+/* Media Queries */
+
+@media(min-width:800px) {
+    nav {
+        background: transparent;
+    }
+    .nav-toggle {
+        display: none;
+    }
+    .logo a {
+        color: var(--clr-white);
+    }
+    .nav-container {
+        width: 90vw;
+        max-width: 1170px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .nav-header {
+        padding: 0;
+    }
+    .items-container {
+        height: auto !important;
+        width: 55%;
+    }
+    .nav-items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav-items a {
+        background: transparent;
+        color: var(--clr-white);
+        padding: 0;
+    }
+    .nav-items a:hover {
+        color: crimson;
+    }
 }
