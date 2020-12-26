@@ -38,6 +38,12 @@ img {
     display: block;
 }
 
+h1,
+h2,
+h3 {
+    font-weight: 500;
+}
+
 
 /* Container */
 
@@ -234,6 +240,88 @@ header {
 .show-link {
     visibility: visible;
     z-index: 100;
+}
+
+
+/* About Section styling */
+
+.about {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: var(--clr-white);
+}
+
+.title {
+    font-family: 'Ubuntu', sans-serif;
+    position: relative;
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    padding-bottom: 1rem;
+}
+
+.title::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 170px;
+    height: 3px;
+    transform: translateX(-50%);
+    background: #111;
+}
+
+.title::after {
+    content: "who i am";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    padding: 5px;
+    background: #fff;
+    color: crimson;
+}
+
+.about-content {}
+
+.about-info .text span {
+    color: crimson;
+}
+
+.about-info .text {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.about-info .btn-crimson:hover {
+    background: #111;
+}
+
+.about-image {
+    position: relative;
+    width: 25rem;
+    height: 30rem;
+    justify-self: center;
+}
+
+.about-image::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 0.25rem solid crimson;
+    top: 2rem;
+    right: -2rem;
+    border-radius: var(--radius);
+}
+
+.my-photo {
+    max-width: 25rem;
+    height: 30rem;
+    object-fit: cover;
+    border-radius: var(--radius);
+    position: relative;
 }
 
 
