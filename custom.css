@@ -41,3 +41,12 @@
     --max-width: 1170px;
     --fixed-width: 620px;
 }
+
+
+/* Container */
+
+.container {
+    width: 90vw;
+    max-width: 1170px;
+    margin: 0 auto;
+}
