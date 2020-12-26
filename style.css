@@ -40,7 +40,8 @@ img {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
     font-weight: 500;
 }
 
@@ -251,7 +252,10 @@ header {
     background: var(--clr-white);
 }
 
-.title {
+
+/* common section content */
+
+section .title {
     font-family: 'Ubuntu', sans-serif;
     position: relative;
     text-align: center;
@@ -260,7 +264,7 @@ header {
     padding-bottom: 1rem;
 }
 
-.title::before {
+section .title::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -271,10 +275,9 @@ header {
     background: #111;
 }
 
-.title::after {
-    content: "who i am";
+section .title::after {
     position: absolute;
-    bottom: -12px;
+    bottom: -15px;
     left: 50%;
     transform: translateX(-50%);
     font-size: 1.2rem;
@@ -283,7 +286,9 @@ header {
     color: crimson;
 }
 
-.about-content {}
+.about .title::after {
+    content: "who i am";
+}
 
 .about-info .text span {
     color: crimson;
@@ -322,6 +327,44 @@ header {
     object-fit: cover;
     border-radius: var(--radius);
     position: relative;
+}
+
+
+/* Services section styling */
+
+.services {
+    background: var(--clr-dark-black);
+    color: var(--clr-white);
+}
+
+.services .title::before {
+    background: var(--clr-white);
+}
+
+.services .title::after {
+    background: var(--clr-dark-black);
+    content: "what i provide";
+}
+
+.services .card {
+    background: var(--clr-black);
+    color: var(--clr-white);
+}
+
+.services .card .card-body {
+    transition: var(--transition);
+}
+
+.services .card .card-body:hover {
+    transform: scale(1.05);
+}
+
+.services .card i {
+    color: crimson;
+}
+
+.services .card .flex {
+    flex-direction: column;
 }
 
 
