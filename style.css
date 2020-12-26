@@ -63,6 +63,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 2;
     background: var(--clr-white);
     box-shadow: var(--light-shadow);
 }
@@ -273,6 +274,18 @@ header {
     }
     .nav-items a:hover {
         color: crimson;
+    }
+}
+
+@media(max-width: 600px) {
+    .banner .banner-item .text-1 {
+        font-size: 20px;
+    }
+    .banner .banner-item .text-2 {
+        font-size: 35px;
+    }
+    .banner .banner-item .text-3 {
+        font-size: 30px;
     }
 }
 
