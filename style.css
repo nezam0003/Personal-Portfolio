@@ -349,18 +349,26 @@ section .title::after {
 .services .card {
     background: var(--clr-black);
     color: var(--clr-white);
-}
-
-.services .card .card-body {
     transition: var(--transition);
 }
 
-.services .card .card-body:hover {
+
+/* .services .card .card-body {
+    transition: var(--transition);
+} */
+
+.services .card:hover {
     transform: scale(1.05);
+    background: crimson;
+}
+
+.services .card:hover i {
+    color: var(--clr-white);
 }
 
 .services .card i {
     color: crimson;
+    transition: color o.3s ease;
 }
 
 .services .card .flex {
