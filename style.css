@@ -213,9 +213,8 @@ header {
     padding: 0.5rem 1rem;
 }
 
-.testing {
-    height: 80vh;
-    background: red;
+.btn-crimson:hover {
+    background: #111;
 }
 
 
@@ -291,18 +290,14 @@ section .title::after {
 }
 
 .about-info .text,
-.skills-info .text {
+.skills-info .text,
+.contact-info .text {
     font-size: 1.5rem;
     font-weight: 600;
 }
 
 .about-info .text span {
     color: crimson;
-}
-
-.about-info .btn-crimson:hover,
-.skills-info .btn-crimson:hover {
-    background: #111;
 }
 
 .about-image {
@@ -383,7 +378,8 @@ section .title::after {
 
 /* Skills section styling */
 
-.skills {
+.skills,
+.contact {
     font-family: 'Poppins', sans-serif;
     background: var(--clr-white);
 }
@@ -472,6 +468,63 @@ section .title::after {
     font-weight: 500;
     color: crimson;
     font-size: 1.5rem;
+}
+
+
+/* Contact section styling */
+
+.contact .title::after {
+    content: "get in touch";
+}
+
+.contact .address .flex {
+    justify-content: flex-start;
+}
+
+.contact .address .address-content i {
+    color: crimson;
+    margin-right: 1.5rem;
+}
+
+.address-info .head {
+    font-weight: 600;
+}
+
+.hidden {
+    visibility: hidden;
+    height: 0;
+}
+
+.contact .card {
+    cursor: auto;
+}
+
+.contact .form-control {
+    margin: 20px 0;
+}
+
+label {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.card input[type='text'],
+.card input[type='email'] {
+    outline: none;
+    border: 0;
+    border: 1px solid #b4becb;
+    width: 100%;
+    padding: 3px;
+    margin-top: 4px;
+    font-size: 16px;
+}
+
+.card textarea {
+    margin-top: 4px;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+    border-color: #b4becb;
 }
 
 
