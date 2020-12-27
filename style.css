@@ -334,12 +334,14 @@ section .title::after {
 
 /* Services section styling */
 
-.services {
+.services,
+.teams {
     background: var(--clr-dark-black);
     color: var(--clr-white);
 }
 
-.services .title::before {
+.services .title::before,
+.teams .title::before {
     background: var(--clr-white);
 }
 
@@ -348,7 +350,8 @@ section .title::after {
     content: "what i provide";
 }
 
-.services .card {
+.services .card,
+.teams .card {
     background: var(--clr-black);
     color: var(--clr-white);
     transition: var(--transition);
@@ -419,7 +422,7 @@ section .title::after {
 }
 
 .skill-bars .css::before {
-    width: 80%;
+    width: 65%;
 }
 
 .skill-bars .bootstrap::before {
@@ -431,11 +434,44 @@ section .title::after {
 }
 
 .skill-bars .jq::before {
-    width: 80%;
+    width: 85%;
 }
 
 .skill-bars .git::before {
     width: 80%;
+}
+
+
+/* Teams section styling */
+
+.teams .title::after {
+    background: var(--clr-dark-black);
+    content: "who with me";
+}
+
+.teams .card {
+    text-align: center;
+}
+
+.teams .card:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+.teams .card img {
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+.teams .card:hover img {
+    border-color: crimson;
+}
+
+.teams .card .card-title {
+    margin: 10px 0px;
+    font-weight: 500;
+    color: crimson;
+    font-size: 1.5rem;
 }
 
 
