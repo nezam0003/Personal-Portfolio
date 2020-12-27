@@ -290,16 +290,18 @@ section .title::after {
     content: "who i am";
 }
 
-.about-info .text span {
-    color: crimson;
-}
-
-.about-info .text {
+.about-info .text,
+.skills-info .text {
     font-size: 1.5rem;
     font-weight: 600;
 }
 
-.about-info .btn-crimson:hover {
+.about-info .text span {
+    color: crimson;
+}
+
+.about-info .btn-crimson:hover,
+.skills-info .btn-crimson:hover {
     background: #111;
 }
 
@@ -373,6 +375,67 @@ section .title::after {
 
 .services .card .flex {
     flex-direction: column;
+}
+
+
+/* Skills section styling */
+
+.skills {
+    font-family: 'Poppins', sans-serif;
+    background: var(--clr-white);
+}
+
+.skills .title::after {
+    content: "what i know";
+}
+
+.skill-bars .bar-info .flex {
+    justify-content: space-between;
+}
+
+.skill-bars span {
+    font-weight: 500;
+}
+
+.skill-bars .progress-bar {
+    width: 100%;
+    height: 10px;
+    background: lightgray;
+    position: relative;
+}
+
+.skill-bars .progress-bar::before {
+    border-radius: 0px 5px 5px 0px;
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: crimson;
+}
+
+.skill-bars .html::before {
+    width: 90%;
+}
+
+.skill-bars .css::before {
+    width: 80%;
+}
+
+.skill-bars .bootstrap::before {
+    width: 85%;
+}
+
+.skill-bars .js::before {
+    width: 70%;
+}
+
+.skill-bars .jq::before {
+    width: 80%;
+}
+
+.skill-bars .git::before {
+    width: 80%;
 }
 
 
