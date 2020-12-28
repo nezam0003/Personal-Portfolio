@@ -34,3 +34,31 @@ window.addEventListener('scroll', () => {
         topLink.classList.remove('show-link');
     }
 });
+
+// Smooth scroll
+const scrollLinks = document.querySelectorAll('.nav-link');
+scrollLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        // Navigate to specific section
+        const id = e.currentTarget.getAttribute("href").slice(1);
+        const element = document.getElementById(id);
+        // calculate the height and get exact position of the specific section
+        const navHeight = navbar.getBoundingClientRect().height;
+        const containerHeight = linksContainer.getBoundingClientRect().height;
+        const fixedNav = navbar.classList.contains('fixed-nav');
+        let position = element.offsetTop - navHeight;
+        if (!fixedNav) {
+            position = position - navHeight;
+        }
+        if (navHeight > 82) {
+            position = position + containerHeight;
+        }
+        window.scrollTo({
+            left: 0,
+            top: position,
+        });
+        // close links when click on a specific link
+        linksContainer.style.height = 0;
+    });
+});
