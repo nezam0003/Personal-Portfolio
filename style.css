@@ -140,7 +140,7 @@ nav {
 }
 
 .nav-items a:hover {
-    color: var(--clr-grey-1);
+    color: crimson;
 }
 
 header {
@@ -223,9 +223,9 @@ header {
 .top-link {
     font-size: 1.25rem;
     position: fixed;
-    bottom: 3rem;
+    bottom: 8rem;
     right: 3rem;
-    background: var(--clr-secondary);
+    background: crimson;
     width: 2rem;
     height: 2rem;
     display: grid;
@@ -490,6 +490,9 @@ section .title::after {
     font-weight: 600;
 }
 
+
+/* netlify form class hidden */
+
 .hidden {
     visibility: hidden;
     height: 0;
@@ -500,7 +503,7 @@ section .title::after {
 }
 
 .contact .form-control {
-    margin: 20px 0;
+    margin: 15px 0;
 }
 
 label {
@@ -528,7 +531,84 @@ label {
 }
 
 
+/* footer section styling */
+
+.footer {
+    background: var(--clr-dark-black);
+}
+
+.footer .logo a {
+    color: var(--clr-white);
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.footer .logo a span {
+    color: crimson;
+}
+
+.footer .nav {
+    padding: 0!important;
+    background: transparent;
+}
+
+.footer ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer ul li a {
+    color: var(--clr-white);
+    transition: var(--transition);
+}
+
+.footer ul li a:hover {
+    color: crimson;
+}
+
+.footer .social {
+    text-align: end;
+}
+
+.footer .social a {
+    margin: 0 10px;
+    color: var(--clr-white);
+    transition: var(--transition);
+}
+
+.footer .social a:hover {
+    margin: 0 10px;
+    color: crimson;
+}
+
+.footer p {
+    color: var(--clr-white);
+    text-align: center;
+    font-size: 1rem;
+}
+
+
 /* Media Queries */
+
+@media(max-width: 1100px) {
+    .footer .grid {
+        grid-template-columns: 1fr;
+    }
+    .footer ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer .social {
+        text-align: start;
+    }
+    .footer .social a:first-child {
+        margin-left: 0;
+    }
+    .footer p {
+        text-align: justify;
+    }
+}
 
 @media(min-width:800px) {
     nav {
