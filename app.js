@@ -202,3 +202,31 @@ function init2() {
     new TypeWriter(txtElement, words, wait);
 
 }
+
+// ***********Dynamic Image gallery**********
+const current = document.querySelector('#current');
+// get all images
+const imgs = document.querySelectorAll('.images img');
+const opacity = 0.4;
+
+// set the opacity for first image
+imgs[0].style.opacity = opacity;
+
+imgs.forEach((img) => {
+    img.addEventListener('click', (e) => {
+        // Reset the opacity
+        imgs.forEach(img => (img.style.opacity = 1));
+
+        // Change current images to src of clicked image
+        current.src = e.target.src;
+
+        // Add fade-in class
+        current.classList.add('fade-in');
+
+        // Remove fade in class in after .5sec
+        setTimeout(() => current.classList.remove('fade-in'), 500);
+
+        // Change the opacity of current clicked image
+        e.target.style.opacity = opacity;
+    });
+});
