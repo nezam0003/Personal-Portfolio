@@ -179,6 +179,13 @@ header {
 }
 
 
+/* Typing cursor */
+
+.banner .text-3 .text-type>.txt {
+    border-right: 0.2rem solid crimson;
+}
+
+
 /* Buttons */
 
 .btn {
