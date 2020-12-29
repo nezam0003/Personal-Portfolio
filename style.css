@@ -476,6 +476,23 @@ section .title::after {
 }
 
 
+/* Gallery section styling */
+
+.gallery .title::after {
+    content: "my photos";
+    background: var(--clr-grey-10);
+}
+
+.gallery .grid .main-img {
+    border: 5px solid #fff;
+}
+
+.gallery .grid-3 {
+    grid-gap: 5px;
+    align-self: flex-start;
+}
+
+
 /* Contact section styling */
 
 .contact .title::after {
@@ -596,7 +613,7 @@ label {
 
 /* Media Queries */
 
-@media(min-width:800px) {
+@media(min-width:900px) {
     nav {
         background: transparent;
     }
@@ -704,6 +721,9 @@ label {
     .grid {
         grid-template-columns: 1fr;
     }
+    .gallery .grid .grid-3 {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 @media(max-width: 1024px) {
@@ -751,4 +771,18 @@ label {
     100% {
         transform: scale(1);
     }
+}
+
+
+/* Animation for Gallery images */
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
 }
