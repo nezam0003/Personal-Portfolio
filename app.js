@@ -132,3 +132,73 @@ function init() {
     new TypeWriter(txtElement, words, wait);
 
 }
+
+// Class type Writer
+class TypeWriter2 {
+    constructor(txtElement, words, wait = 3000) {
+        this.txtElement = txtElement;
+        this.words = words;
+        this.txt = '';
+        this.wordIndex = 0;
+        this.wait = parseInt(wait, 10);
+        this.type();
+        this.isDeleting = false;
+    }
+    type() {
+        // current index of word
+        const current = this.wordIndex % this.words.length;
+
+        // Get full text of current word
+        const fullTxt = this.words[current];
+
+        // Check if Deleting
+        if (this.isDeleting) {
+            // Remove character
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+
+        } else {
+            // Add character
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        // Insert txt into element
+        this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
+
+        // Initial Type speed
+        let typeSpeed = 300;
+        if (this.isDeleting) {
+            typeSpeed /= 2;
+        }
+
+        // if Word is completed
+        if (!this.isDeleting && this.txt === fullTxt) {
+            // this will make pause at the End
+            typeSpeed = this.wait;
+            // set isDeleting to True
+            this.isDeleting = true;
+        }
+        // Switch to the next word after deleting one
+        else if (this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            this.wordIndex++;
+            // Pause before start typing again
+            typeSpeed = 500;
+
+        }
+
+        setTimeout(() => this.type(), typeSpeed);
+    }
+}
+// init2 on DOM Load
+document.addEventListener('DOMContentLoaded', init2);
+
+// init2 App
+function init2() {
+    const txtElement = document.querySelector('.text-type2');
+    const words = JSON.parse(txtElement.getAttribute('data-words'));
+    const wait = txtElement.getAttribute('data-wait');
+
+    // Init2ialize TypeWriter
+    new TypeWriter(txtElement, words, wait);
+
+}

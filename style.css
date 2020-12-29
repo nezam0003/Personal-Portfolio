@@ -181,7 +181,8 @@ header {
 
 /* Typing cursor */
 
-.banner .text-3 .text-type>.txt {
+.banner .text-3 .text-type>.txt,
+.about .about-info .text-type2>.txt {
     border-right: 0.2rem solid crimson;
 }
 
