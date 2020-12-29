@@ -46,9 +46,6 @@ h4 {
 }
 
 
-/* Container */
-
-
 /* Navbar styling */
 
 nav {
@@ -591,25 +588,6 @@ label {
 
 /* Media Queries */
 
-@media(max-width: 1100px) {
-    .footer .grid {
-        grid-template-columns: 1fr;
-    }
-    .footer ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .footer .social {
-        text-align: start;
-    }
-    .footer .social a:first-child {
-        margin-left: 0;
-    }
-    .footer p {
-        text-align: justify;
-    }
-}
-
 @media(min-width:800px) {
     nav {
         background: transparent;
@@ -648,7 +626,44 @@ label {
     }
 }
 
-@media(max-width: 600px) {
+@media(max-width: 340px) {
+    .about .about-image {
+        width: 12rem !important;
+        height: 15rem !important;
+    }
+    .about .my-photo {
+        max-width: 12rem !important;
+        height: 15rem !important;
+    }
+}
+
+@media(max-width: 460px) {
+    .about .about-image {
+        width: 15rem;
+        height: 20rem;
+    }
+    .about .my-photo {
+        max-width: 15rem;
+        height: 20rem;
+    }
+    .services .grid,
+    .teams .grid {
+        grid-template-columns: 1fr !important;
+    }
+    .btn {
+        padding: 0.360rem 0.50rem;
+        letter-spacing: 1px;
+        font-size: 0.725rem;
+    }
+}
+
+@media(max-width: 540px) {
+    section .title {
+        margin-bottom: 2rem;
+    }
+    .banner .banner-item {
+        text-align: center;
+    }
     .banner .banner-item .text-1 {
         font-size: 20px;
     }
@@ -658,7 +673,65 @@ label {
     .banner .banner-item .text-3 {
         font-size: 30px;
     }
+    .about-info .text,
+    .skills-info .text,
+    .contact-info .text {
+        font-size: 1rem;
+    }
+    .about-info p {
+        margin: 5px;
+        font-size: 14px;
+    }
+    .about-image {
+        width: 20rem;
+        height: 25rem;
+    }
+    .my-photo {
+        max-width: 20rem;
+        height: 25rem;
+    }
 }
+
+@media(max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 1024px) {
+    .services .grid,
+    .teams .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 1100px) {
+    .footer .grid {
+        grid-template-columns: 1fr;
+    }
+    .footer ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .footer .social {
+        text-align: start;
+    }
+    .footer .social a:first-child {
+        margin-left: 0;
+    }
+    .footer p {
+        text-align: justify;
+    }
+}
+
+@media(min-width: 1100px) {
+    .footer .grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+
+
+/* Animation */
 
 @keyframes bounce {
     0% {
