@@ -230,3 +230,23 @@ imgs.forEach((img) => {
         e.target.style.opacity = opacity;
     });
 });
+
+// Download CV
+const btnDownload = document.getElementById('btn-download');
+const xhr = new XMLHttpRequest();
+xhr.responseType = "blob";
+xhr.open("GET", "cv.pdf", true);
+xhr.onreadystatechange = () => {
+    if (xhr.readyState == 4 && xhr.status == 200) {
+        const obj = window.URL.createObjectURL(xhr.response);
+        btnDownload.setAttribute("href", obj);
+
+        // Remove obj after 60s
+        setTimeout(() => {
+            window.URL.revokeObjectURL(obj);
+        }, 60 * 1000);
+    } else {
+        console.log('error');
+    }
+}
+xhr.send();
