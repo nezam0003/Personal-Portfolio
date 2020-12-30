@@ -378,6 +378,7 @@ section .title::after {
 
 .services .card .flex {
     flex-direction: column;
+    /* align-self: center; */
 }
 
 
