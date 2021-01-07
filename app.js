@@ -5,14 +5,20 @@ const navToggle = document.querySelector('.nav-toggle');
 const linksContainer = document.querySelector('.items-container');
 const links = document.querySelector('.nav-items');
 
+// set initial state of menu 
+let showMenu = false;
 // Toggle events
 navToggle.addEventListener('click', () => {
     const linksContainerHeight = linksContainer.getBoundingClientRect().height;
     const linksHeight = links.getBoundingClientRect().height;
-    if (linksContainerHeight === 0) {
+    if (!(showMenu) && (linksContainerHeight === 0)) {
+        navToggle.classList.add('close');
         linksContainer.style.height = `${linksHeight}px`;
+        showMenu = true;
     } else {
+        navToggle.classList.remove('close');
         linksContainer.style.height = 0;
+        showMenu = false;
     }
 });
 

@@ -97,16 +97,32 @@ nav {
 }
 
 .nav-toggle {
-    background: transparent;
-    border: transparent;
-    font-size: 1.5rem;
-    color: var(--clr-grey-1);
-    outline: none;
     cursor: pointer;
+    transition: var(--transition);
 }
 
-.nav-toggle:hover {
-    color: var(--clr-secondary);
+.nav-toggle .toggle-bar {
+    width: 28px;
+    height: 3px;
+    background: var(--clr-grey-1);
+    margin: 0 0 5px 0;
+    transition: var(--transition);
+}
+
+.nav-toggle.close {
+    transform: rotate(180deg);
+}
+
+.nav-toggle.close .toggle-bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle.close .toggle-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.close .toggle-bar:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
 }
 
 .logo a {
@@ -126,7 +142,7 @@ nav {
 }
 
 .nav-items a {
-    display: block;
+    display: inline-block;
     background: var(--clr-white);
     color: var(--clr-grey-5);
     font-size: 1.1rem;
